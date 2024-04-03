@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas{
+    background-color: black;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.controls{
+    position: absolute;
+    padding: 10px;
+    border: 2px solid white;
+    top:20px;
+    left:20px;
+    width:250px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btnC{
+    padding: 10px 40px;
+    width: 225px;
+    font-size: 20px;
+
+
+}
+
+
+label, input{
+    color:white;
+    
+}
