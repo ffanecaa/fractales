@@ -3,14 +3,14 @@ window.addEventListener('load', function(){
   const canvas = document.getElementById('canvas')
   let ctx = canvas.getContext('2d')
 
-  cw = canvas.width = innerWidth
-  ch = canvas.height = innerHeight
+  cw = canvas.width = (innerWidth-150)
+  ch = canvas.height = (innerHeight-150)
 
   ctx.fillStyle ='green'
  
 //   ctx.lineWidth = Math.floor(Math.random()*20+10)
   ctx.lineCap = "round"
-  ctx.shadowColor = "rgba(0,0,0,0.7)"
+  ctx.shadowColor = "rgba(0,0,10,0.7)"
   ctx.shadowOffsetX = 10
   ctx.shadowOffsetY = 5
   ctx.shadowBlur = 10
@@ -21,7 +21,7 @@ window.addEventListener('load', function(){
  
 
   //let size = 200 lo automatizamos
-  let size = cw <ch ? cw*0.3: ch*0.3
+  let size = cw < ch ? cw*0.232 : ch*0.232
 
   //let maxLevel = 4 lo paso a const mas eficiente
    // let branches = 4  idem
@@ -29,8 +29,9 @@ window.addEventListener('load', function(){
   let sides = 5
   let scala =0.5
   let spread = 0.5//rotacion valor en radianes
-  let color = 'hsl('+ Math.random()*360+',100%,50%)'
+  let color = 'hsl('+ Math.random()*40+',20%,90%)'
   let lineWidth =Math.floor(Math.random()*20 +10)
+  
 /*controlador */
 let btnC = document.getElementById("btnC")
 let btnReset = document.getElementById('btcReset')
@@ -97,10 +98,10 @@ function drawBranch ( level){
 
 
 function controlFractal(){
-     sides = Math.floor(Math.random() * 7 +2)
+     sides = Math.floor(Math.random() * 7 +4)
      scala = Math.random() * 0.2 + 0.4
-     spread = Math.random() * 2.9 +0.1
-     color = 'hsl('+ Math.random()*360+',100%,50%)'
+     spread = Math.random() * 1.8 +0.1
+     color = 'hsl('+ Math.random()*50+',80%,50%)'
      lineWidth = Math.floor(Math.random()*20 +10)
     
 
@@ -117,7 +118,7 @@ function resetFractal(){
     sides = 5
      scala = 0.5
      spread =0.7
-     color = 'hsl(290,100%,50%)'
+     color = 'hsl(90,100%,50%)'
      lineWidth = 20
 }
 
